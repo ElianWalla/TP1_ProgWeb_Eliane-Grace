@@ -12,6 +12,7 @@ import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../even
  * Responsable de l'affichage dans le DOM.
  * Ne contient aucune logique de jeu.
  */
+
 export class VueQuiz {
     #conteneur;
     #quiz;

@@ -4,6 +4,21 @@
  */
 class Joueur {
 
+   #nom;
+   #score;
+
+   constructor(nom) {
+
+       this.#nom = nom;
+       this.#score = 0;
+   }
+
+   get getNom () {
+
+       return nom;
+    }
+
+
 
     /**
      * Compare le score avec un autre joueur.
