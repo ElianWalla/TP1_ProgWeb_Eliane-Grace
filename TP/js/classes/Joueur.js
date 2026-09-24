@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Classe Joueur
  * Représente un joueur avec son nom et son score.
@@ -10,14 +12,27 @@ class Joueur {
    constructor(nom) {
 
        this.#nom = nom;
-       this.#score = 0;
    }
 
    get getNom () {
 
-       return nom;
+       return this.#nom;
     }
 
+    get getScore () {
+
+       return this.#score;
+    }
+
+    ajouterPoint() {
+
+       this.#score++;
+    }
+
+    reinitialiser () {
+
+        this.#score = 0;
+    }
 
 
     /**
@@ -26,5 +41,22 @@ class Joueur {
      * @returns {number} 1 si supérieur, -1 si inférieur, 0 si égalité
      */
     comparerA(autre) {
+
+        let égalité = 0;
+
+        if (this.getScore > autre.getScore) {
+
+            égalité = 1;
+
+        } else if (this.getScore === autre.getScore) {
+
+            égalité = 0;
+
+        } else if (this.getScore < autre.getScore) {
+
+            égalité = -1;
+        }
+
+        return égalité;
     }
 }
