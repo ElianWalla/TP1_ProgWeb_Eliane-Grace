@@ -17,7 +17,7 @@ class Question {
         if(question !== null){
             this.#enonce = question;
         }
-        if(options !== ''){
+        if(options !==null){
             this.#options = options;
         }
         if(correct >0){
@@ -46,8 +46,11 @@ class Question {
      * @returns {string}
      */
     lettreA(index) {
+        let numeroAphabetique =" ";
+        
+
         if(index.valueOf()){
-            return 'A','B','C';
+            return numeroAphabetique.toUpperCase();
         }
     }
 }
