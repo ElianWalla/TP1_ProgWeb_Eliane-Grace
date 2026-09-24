@@ -3,9 +3,12 @@
 // =============================================================================
 
 import {
-    TEMPLATE_BIENVENUE
+    TEMPLATE_OPTION,
+    TEMPLATE_RESULTAT,
+    TEMPLATE_BIENVENUE,
+    TEMPLATE_JOUEUR_RESULTAT,
 } from "../VuesDynamiques.js";
-import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
+import {handleDemarrer, handleQuestionSuivante, handleRecommancer, handleChoixDeReponse} from "../evenements.js";
 
 /**
  * Classe VueQuiz

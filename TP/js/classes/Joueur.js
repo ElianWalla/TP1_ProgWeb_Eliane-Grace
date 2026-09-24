@@ -12,8 +12,8 @@ class Joueur {
    constructor(nom) {
 
        this.#nom = nom;
+       this.#score = 0;
    }
-
    get getNom () {
 
        return this.#nom;
