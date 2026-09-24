@@ -3,6 +3,9 @@
  * Représente une question de quiz avec ses options et la bonne réponse.
  */
 class Question {
+    #enonce;
+    #options;
+    #indexCorrect;
 
     /**
      * @param {Object} data - Données de la question
@@ -11,14 +14,43 @@ class Question {
      * @param {number} data.correct - Index de la bonne réponse (0..3)
      */
     constructor({question, options, correct}) {
+        if(question !== null){
+            this.#enonce = question;
+        }
+        if(options !==null){
+            this.#options = options;
+        }
+        if(correct >0){
+            this.#indexCorrect = correct;
+        }
 
     }
 
+    get etiquette(){
+        return this.#indexCorrect;
+
+    }
+    get options(){
+        return this.#indexCorrect;
+    }
+
+
+    estCorrect(index){
+        if(index===this.#indexCorrect){
+            return true;
+        }
+    }
     /**
      * Retourne la lettre correspondant à un index (A, B, C, D…).
      * @param {number} index
      * @returns {string}
      */
     lettreA(index) {
+        let numeroAphabetique =" ";
+        
+
+        if(index.valueOf()){
+            return numeroAphabetique.toUpperCase();
+        }
     }
 }

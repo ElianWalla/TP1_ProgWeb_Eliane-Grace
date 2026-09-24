@@ -26,9 +26,14 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 `;
 
 // Compléter TEMPLATE_BADGE_JOUEUR
-
+export const TEMPLATE_BADGE_JOUEUR = (nom,score) => `
+<div class="name" >$nom</div>
+<div class="score">$score</div>
+`
 
 // Compléter TEMPLATE_QUIZ
+export const TEMPLATE_QUIZ = `
+`
 
 
 export const TEMPLATE_JOUEUR_RESULTAT = (nom, score, estGagnant, htmlIcones = '') => `
